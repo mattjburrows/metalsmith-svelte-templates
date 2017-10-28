@@ -1,0 +1,25 @@
+{
+  "name": "metalsmith-svelte-templates",
+  "version": "1.0.0",
+  "description": "metalsmith static site generation using Svelte templates",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "svelte",
+    "metalsmith",
+    "templating"
+  ],
+  "author": " <mattjburrows@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "lodash.omit": "^4.5.0",
+    "svelte": "^1.41.2"
+  },
+  "devDependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "metalsmith": "^2.3.0",
+    "mocha": "^4.0.1"
+  }
+}
