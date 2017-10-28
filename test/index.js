@@ -38,6 +38,25 @@ describe('Metalsmith Svelte templates', () => {
       });
   });
 
+  it('renders the correct number of files based on the contents of the source directory', (done) => {
+    Metalsmith(__dirname)
+      .source('./src')
+      .destination('./dist')
+      .use(svelte({
+        templates: `${__dirname}/templates`,
+        base: `${__dirname}/layouts/base.html`
+      }))
+      .build((err, files) => {
+        assert.ifError(err);
+
+        assert.equal(Object.keys(files).length, 2);
+        assert(files['index.html']);
+        assert(files['foo/index.html']);
+
+        done();
+      });
+  });
+
   it('renders the layout for a given source with the parameters specified in the source', (done) => {
     Metalsmith(__dirname)
       .source('./src')

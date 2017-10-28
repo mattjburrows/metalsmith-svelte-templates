@@ -4,12 +4,21 @@
   "description": "metalsmith static site generation using Svelte templates",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "coverage": "istanbul cover ./test/index.js"
   },
   "keywords": [
-    "svelte",
     "metalsmith",
-    "templating"
+    "metalsmith-plugin",
+    "svelte",
+    "html",
+    "script",
+    "transform",
+    "compile",
+    "compiler",
+    "transpile",
+    "transpiler",
+    "template"
   ],
   "author": " <mattjburrows@gmail.com>",
   "license": "ISC",
@@ -19,6 +28,7 @@
   },
   "devDependencies": {
     "cheerio": "^1.0.0-rc.2",
+    "istanbul": "^0.4.5",
     "metalsmith": "^2.3.0",
     "mocha": "^4.0.1"
   }
