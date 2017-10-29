@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>{{sitename}}</title>
+  {{#if inlineCSS}}<style id="svelte-inline-css">{{inlineCSS}}</style>{{/if}}
 </head>
 <body class="body">
   {{{contents}}}

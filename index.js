@@ -26,8 +26,12 @@ function getComponent(files, file, templates) {
   return compile(componentPath, componentData);
 }
 
-function getBaseComponent(baseComponentPath, contents, metadata) {
-  const baseComponentData = Object.assign({ contents }, metadata);
+function getBaseComponent(baseComponentPath, metadata, { code, css }) {
+
+  const baseComponentData = Object.assign({
+    contents: code,
+    inlineCSS: css
+  }, metadata);
 
   return compile(baseComponentPath, baseComponentData);
 }
@@ -39,7 +43,7 @@ function getSvelteCompiledFiles(files, options, metalsmith) {
 
   return (accumulator, file) => {
     const component = getComponent(files, file, templates);
-    const baseComponent = getBaseComponent(baseComponentPath, component.code, metadata);
+    const baseComponent = getBaseComponent(baseComponentPath, metadata, component);
 
     return Object.assign(buildContentMap(file, baseComponent.code), accumulator);
   }
