@@ -30,7 +30,8 @@ inlineCSS: true
 ```
 #### Template options
 - `layout` - required - Filename of the template to use. These are housed within the [Options](#options) `templates` directory.
-- `inlineCSS` - optional - Specifies whether you want to inline CSS into the base template. You will need to include the `inlineCSS` template key in your base file in order to print out the inline styles.
+- `inlineCSS` - optional - Specifies whether you want to inline CSS into the base template.
+  - You will need to include the `inlineCSS` template key in your [base file](test/layouts/base.html) in order to print out the inline styles.
 - `data` - optional - Extra data that gets passed to the svelte component, format `foo: bar`.
 - `contents` - required - Contents that gets added to the layout.
 
