@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha",
-    "coverage": "istanbul cover ./test/index.js"
+    "coverage": "istanbul cover ./test/index.js",
+    "lint": "eslint ."
   },
   "keywords": [
     "metalsmith",
@@ -28,8 +29,14 @@
   },
   "devDependencies": {
     "cheerio": "^1.0.0-rc.2",
+    "eslint": "^4.10.0",
+    "eslint-config-iplayer-es6": "^3.1.0",
+    "eslint-plugin-mocha": "^4.11.0",
     "istanbul": "^0.4.5",
     "metalsmith": "^2.3.0",
     "mocha": "^4.0.1"
+  },
+  "eslintConfig": {
+    "extends": "iplayer-es6"
   }
 }

@@ -167,6 +167,6 @@ describe('Metalsmith Svelte templates', () => {
           }
         );
       });
-    })
-  })
+    });
+  });
 });

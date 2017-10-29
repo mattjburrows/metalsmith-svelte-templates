@@ -46,7 +46,7 @@ function getSvelteCompiledFiles(files, options, metalsmith) {
     const baseComponent = getBaseComponent(baseComponentPath, metadata, component);
 
     return Object.assign(buildContentMap(file, baseComponent.code), accumulator);
-  }
+  };
 }
 
 function isMissingRequiredPluginOptions(options) {
@@ -72,5 +72,5 @@ module.exports = function metalsmithSvelteTemplatesPlugin(options) {
     );
 
     Object.assign(files, svelteCompiledFiles);
-  }
-}
+  };
+};
