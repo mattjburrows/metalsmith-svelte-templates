@@ -1,7 +1,7 @@
 {
   "name": "metalsmith-svelte-templates",
   "version": "1.0.0",
-  "description": "metalsmith static site generation using Svelte templates",
+  "description": "Metalsmith static site generation using Svelte templates",
   "main": "index.js",
   "scripts": {
     "test": "mocha",
